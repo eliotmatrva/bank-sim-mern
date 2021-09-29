@@ -10,7 +10,7 @@ export default function Home(){
       txtcolor="white"
       header="Welcome to Banco Mal de Mateo"
       title="Banco Mal de Mateo"
-      text="Welcome to Matt's Bad Bank. We'll loan your money to other people!"
+      text="Welcome to Matt's Bad Bank. We promise to be responsible with your money!"
       body={(
         <img
           src={bankLogo}
