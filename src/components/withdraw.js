@@ -15,7 +15,7 @@ export default function Withdraw(){
     async function fetchUser(){
       let email = activeUserX;
       //await fetch(`http://localhost:8081/users/findUser/${email}`, {method: 'GET'})
-      await fetch(`https://capstone-bank-app-client.herokuapp.com/users/findUser/${email}`, {method: 'GET'})
+      await fetch(`https://capstone-bank-app-server.herokuapp.com/users/findUser/${email}`, {method: 'GET'})
       .then(response => response.json())
       .then(data => setWithdrawUser(data));
     }
@@ -29,7 +29,7 @@ export default function Withdraw(){
     function handleWithdraw(values){
       let newBalance = parseInt(withdrawerClone.balance) - parseInt(values.withdraw);
       updateUserBalance(newBalance);
-      alert(`Congratulations! 💰💸🤑 You deposited ${values.withdraw}`);
+      alert(`Cha ching! 💰💸🤑 You withdrew ${values.withdraw}`);
     }
 
     function updateUserBalance(newBalance){

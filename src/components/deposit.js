@@ -15,7 +15,7 @@ export default function Deposit(){
     async function fetchUser(){
       let email = activeUserX;
       //await fetch(`http://localhost:8081/users/findUser/${email}`, {method: 'GET'})
-      await fetch(`https://capstone-bank-app-client.herokuapp.com/users/findUser/${email}`, {method: 'GET'})
+      await fetch(`https://capstone-bank-app-server.herokuapp.com/users/findUser/${email}`, {method: 'GET'})
       .then(response => response.json())
       .then(data => setDepositUser(data));
     }
@@ -29,7 +29,7 @@ export default function Deposit(){
     function handleDeposit(values){
       let newBalance = parseInt(depositerClone.balance) + parseInt(values.deposit);
       updateUserBalance(newBalance);
-      alert(`Congratulations! You deposited ${values.deposit}`);
+      alert(`Hey Moneybags, You deposited ${values.deposit}! 💰💰💰`);
     }
 
     function updateUserBalance(newBalance){

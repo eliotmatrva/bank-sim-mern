@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import Card from './card';
 import { UserContext, ActiveUserXContext } from '../index.js'
-import Cookies from 'universal-cookie';
 
 export default function Login(){
     const [show, setShow]         = React.useState(true);
@@ -33,9 +32,6 @@ export default function Login(){
 
       function updateActiveUser(userIndexPosition){
         let activeUser = value[userIndexPosition].email;
-        const cookies = new Cookies();
-        cookies.set('activeUser', activeUser, { path: '/'});
-        console.log(`the active user from cookie is ${cookies.get('activeUser')}`);
         setStatus('User not found.  Try again');
         setActiveUserX(activeUser);
         console.log(JSON.stringify(value));
