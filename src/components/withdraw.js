@@ -36,7 +36,7 @@ export default function Withdraw(){
       let email = activeUserX;
       let balance = parseInt(newBalance);
       //fetch(`http://localhost:8081/users/updateBalance/${email}/${balance}`, {method: 'PUT'})
-      fetch(`https://capstone-bank-app-client.herokuapp.com/users/updateBalance/${email}/${balance}`, {method: 'PUT'})
+      fetch(`https://capstone-bank-app-server.herokuapp.com/users/updateBalance/${email}/${balance}`, {method: 'PUT'})
       .then(response => response.text())
       .then(data => {
         console.log(data);

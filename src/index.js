@@ -24,7 +24,7 @@ function Spa() {
   useEffect(() =>{
     let allUsers;
      //fetch('http://localhost:8081/api/users', {method: 'GET'})
-     fetch('https://capstone-bank-app-client.herokuapp.com/api/users', {method: 'GET'})
+     fetch('https://capstone-bank-app-server.herokuapp.com/api/users', {method: 'GET'})
     .then(response => response.json())
     .then(data => {
       allUsers = data;
