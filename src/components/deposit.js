@@ -14,7 +14,8 @@ export default function Deposit(){
   useEffect(() => {
     async function fetchUser(){
       let email = activeUserX;
-      await fetch(`http://localhost:8081/users/findUser/${email}`, {method: 'GET'})
+      //await fetch(`http://localhost:8081/users/findUser/${email}`, {method: 'GET'})
+      await fetch(`https://capstone-bank-app-client.herokuapp.com/users/findUser/${email}`, {method: 'GET'})
       .then(response => response.json())
       .then(data => setDepositUser(data));
     }
@@ -34,7 +35,8 @@ export default function Deposit(){
     function updateUserBalance(newBalance){
       let email = activeUserX;
       let balance = parseInt(newBalance);
-      fetch(`http://localhost:8081/users/updateBalance/${email}/${balance}`, {method: 'PUT'})
+      fetch(`https://capstone-bank-app-client.herokuapp.com/users/updateBalance/${email}/${balance}`, {method: 'PUT'})
+      //fetch(`http://localhost:8081/users/updateBalance/${email}/${balance}`, {method: 'PUT'})
       .then(response => response.text())
       .then(data => {
         console.log(data);
