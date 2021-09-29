@@ -9,7 +9,8 @@ export default function AllData(){
 
     useEffect(() => {
         async function fetchUsers() {
-            await fetch('http://localhost:8081/api/users', {method: 'GET'})
+            //await fetch('http://localhost:8081/api/users', {method: 'GET'})
+            await fetch('https://capstone-bank-app-server.herokuapp.com/api/users', {method: 'GET'})
             .then(response => response.json())
             .then(data => setUsers(data));
         }

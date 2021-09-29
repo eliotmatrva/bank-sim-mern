@@ -56,7 +56,8 @@ export default function CreateAccount(){
     let balance = values.balance;
     let role = values.role;
     console.log('starting create user');
-    fetch(`http://localhost:8081/users/createUser/${name}/${email}/${password}/${balance}/${role}`, {method: 'POST'})
+    //fetch(`http://localhost:8081/users/createUser/${name}/${email}/${password}/${balance}/${role}`, {method: 'POST'})
+    fetch(`https://capstone-bank-app-server.herokuapp.com/users/createUser/${name}/${email}/${password}/${balance}/${role}`, {method: 'POST'})
     .then(response => response.text())
     .then(data => {
       console.log(`You added new user ${data}`);
