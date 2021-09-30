@@ -9,6 +9,7 @@
 <h2>Roadmap</h2>
 <ul>
 <li>code cleanup</li>
+<li>remove unused create-react-app artifacts</li>
 <li>Add delete user functionality</li>
 <li>UI refresh</li>
 <li>fix useEffect() calls to fetch mongoDB data</li>
