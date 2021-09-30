@@ -1,4 +1,4 @@
-<h1>Welcome to the Bad Bank MERN app</h1>
+<h1>Welcome to the Bad Bank MERN app (client)</h1>
 <h2>About</h2>
 <p>This is the front end for a mobile banking app simulation</p>
 <h2>Installation</h2>
